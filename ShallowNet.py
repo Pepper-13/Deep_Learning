@@ -11,3 +11,14 @@ from keras.optimizers import SGD
 
 #load data
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+#Have a look at your data and its shape
+X_train.shape
+#o/p = (6000,28,28)
+y_train.shape
+#o/p = (6000,)
+y_train[0:99]
+x_train[0]
+y_test.shape
+X_test.shape
+#o/p = (10000,28,28)
