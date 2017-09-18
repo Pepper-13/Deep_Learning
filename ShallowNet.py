@@ -27,3 +27,7 @@ X_test.shape
 #Change the two dimensional data to one dimensional data
 X_train = X_train.reshape(60000,784).astype('float32')
 X_test = X_test.reshape(10000,784).astype('float32')
+
+X_train /= 255
+X_test /= 255
+
