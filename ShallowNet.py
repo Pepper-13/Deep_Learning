@@ -31,3 +31,5 @@ X_test = X_test.reshape(10000,784).astype('float32')
 X_train /= 255
 X_test /= 255
 
+#Have a look 
+X_train[0]
