@@ -40,3 +40,8 @@ y_train = keras.utils.to_categorical(y_train, n_classes)
 y_test = keras.utils.to_categorical(y_test, n_classes)
 
 y_test[0]
+
+#Building the neural network architecture:
+model = Sequential()
+model.add(Dense(64, activation='sigmoid', input_shape=(784,)))
+model.add(Dense(10, activation='softmax'))
