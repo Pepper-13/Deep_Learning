@@ -33,3 +33,7 @@ X_test /= 255
 
 #Have a look 
 X_train[0]
+
+n_classes = 10
+y_train = keras.utils.to_categorical(y_train, n_classes)
+y_test = keras.utils.to_categorical(y_test, n_classes)
