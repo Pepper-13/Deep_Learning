@@ -45,3 +45,6 @@ y_test[0]
 model = Sequential()
 model.add(Dense(64, activation='sigmoid', input_shape=(784,)))
 model.add(Dense(10, activation='softmax'))
+
+
+model.summary()
