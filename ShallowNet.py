@@ -46,5 +46,13 @@ model = Sequential()
 model.add(Dense(64, activation='sigmoid', input_shape=(784,)))
 model.add(Dense(10, activation='softmax'))
 
-
+#Check the summary
 model.summary()
+
+(64*784)
+(64*784)+64
+(10*64)+10
+
+#Configure the model
+model.compile(loss='mean_squared_error', optimizer=SGD(lr=0.01), metrics=['accuracy'])
+
