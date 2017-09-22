@@ -25,3 +25,17 @@ X_test /= 255
 n_classes = 10
 y_train = keras.utils.to_categorical(y_train, n_classes)
 y_test = keras.utils.to_categorical(y_test, n_classes)
+
+#DesignNeuralNetwork
+
+model = Sequential()
+model.add(Dense(64, activation='relu', input_shape=(784,)))
+model.add(BatchNormalization())
+model.add(Dropout(0.5))
+model.add(Dense(64, activation='relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.5))
+# model.add(Dense(64, activation='relu'))
+# model.add(BatchNormalization())
+# model.add(Dropout(0.5))
+model.add(Dense(10, activation='softmax'))
