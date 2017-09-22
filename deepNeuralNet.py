@@ -45,4 +45,5 @@ model.summary()
 #Configure Model 
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-
+#Train
+model.fit(X_train, y_train, batch_size=128, epochs=200, verbose=1, validation_data=(X_test, y_test))
