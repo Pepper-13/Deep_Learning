@@ -18,3 +18,10 @@ from keras.optimizers import SGD
 #Prepocess data
 X_train = X_train.reshape(60000, 784).astype('float32')
 X_test = X_test.reshape(10000, 784).astype('float32')
+
+X_train /= 255
+X_test /= 255
+
+n_classes = 10
+y_train = keras.utils.to_categorical(y_train, n_classes)
+y_test = keras.utils.to_categorical(y_test, n_classes)
