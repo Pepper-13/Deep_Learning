@@ -40,6 +40,8 @@ stemmer = PorterStemmer()
 #handle bigram collocations
 phrases = Phrases(gberg_sents) # train detector
 bigram = Phraser(phrases) # create a more efficient Phraser object for transforming sentences
+bigram.phrasegrams # output count and score of each bigram
+"Jon lives in New York City".split()
 
 
 
