@@ -34,4 +34,12 @@ gberg_sents[4]
 stpwrds = stopwords.words('english') + list(string.punctuation)
 stpwrds
 [w.lower() for w in gberg_sents[4] if w not in stpwrds]
+#stemwords
+stemmer = PorterStemmer()
+[stemmer.stem(w.lower()) for w in gberg_sents[4] if w not in stpwrds]
+#handle bigram collocations
+phrases = Phrases(gberg_sents) # train detector
+bigram = Phraser(phrases) # create a more efficient Phraser object for transforming sentences
+
+
 
