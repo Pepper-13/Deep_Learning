@@ -41,7 +41,11 @@ stemmer = PorterStemmer()
 phrases = Phrases(gberg_sents) # train detector
 bigram = Phraser(phrases) # create a more efficient Phraser object for transforming sentences
 bigram.phrasegrams # output count and score of each bigram
-"Jon lives in New York City".split()
 
+#preprocess
+lower_sents = []
+for s in gberg_sents:
+    lower_sents.append([w.lower() for w in s if w not in list(string.punctuation)])
 
+lower_sents[0:5]
 
