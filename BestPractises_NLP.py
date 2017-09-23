@@ -51,3 +51,10 @@ lower_sents[0:5]
 lower_bigram = Phraser(Phrases(lower_sents))
 lower_bigram.phrasegrams
 
+lower_bigram = Phraser(Phrases(lower_sents, min_count=32, threshold=64))
+lower_bigram.phrasegrams
+
+clean_sents = []
+for s in lower_sents:
+    clean_sents.append(lower_bigram[s])
+
