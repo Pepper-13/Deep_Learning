@@ -30,4 +30,8 @@ from nltk.corpus import gutenberg
 gberg_sents[4]
 #to lowercase
 [w.lower() for w in gberg_sents[4]]
+#remove stopwords and punctuation 
+stpwrds = stopwords.words('english') + list(string.punctuation)
+stpwrds
+[w.lower() for w in gberg_sents[4] if w not in stpwrds]
 
