@@ -19,5 +19,12 @@ from nltk.stem.porter import *
 from gensim.models.phrases import Phraser, Phrases
 from keras.preprocessing.text import one_hot
 
+nltk.download('stopwords')
+
+#Load Data
+nltk.download('gutenberg')
+from nltk.corpus import gutenberg
+
+#iteratively preprocess a sentence
 
 
