@@ -57,4 +57,9 @@ lower_bigram.phrasegrams
 clean_sents = []
 for s in lower_sents:
     clean_sents.append(lower_bigram[s])
+    
+#Run Word2vec
+model = Word2Vec(sentences=clean_sents, size=64, sg=1, window=10, min_count=10, seed=42, workers=8)
+model.save('clean_gutenberg_model.w2v')
+len(model.wv.vocab)
 
