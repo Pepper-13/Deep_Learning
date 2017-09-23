@@ -78,3 +78,11 @@ coords_df = pd.DataFrame(X_2d, columns=['x','y'])
 coords_df['token'] = model.wv.vocab.keys()
 coords_df.head()
 
+#Visualise
+coords_df = pd.read_csv('clean_gutenberg_tsne.csv')
+_ = coords_df.plot.scatter('x', 'y', figsize=(12,12), marker='.', s=10, alpha=0.2)
+subset_df = coords_df.sample(n=5000)
+p = figure(plot_width=800, plot_height=800)
+_ = p.text(x=subset_df.x, y=subset_df.y, text=subset_df.token)
+show(p)
+
