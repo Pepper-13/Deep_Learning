@@ -26,5 +26,8 @@ nltk.download('gutenberg')
 from nltk.corpus import gutenberg
 
 #iteratively preprocess a sentence
-
+#tokenised sentence
+gberg_sents[4]
+#to lowercase
+[w.lower() for w in gberg_sents[4]]
 
