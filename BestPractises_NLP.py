@@ -48,4 +48,6 @@ for s in gberg_sents:
     lower_sents.append([w.lower() for w in s if w not in list(string.punctuation)])
 
 lower_sents[0:5]
+lower_bigram = Phraser(Phrases(lower_sents))
+lower_bigram.phrasegrams
 
