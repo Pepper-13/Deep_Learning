@@ -67,3 +67,5 @@ len(model.wv.vocab)
 model = gensim.models.Word2Vec.load('clean_gutenberg_model.w2v')
 model['ma_am']
 
+model.most_similar('ma_am')
+model.most_similar(positive=['ma_am', 'woman'], negative=['man'])
