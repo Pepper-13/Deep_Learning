@@ -69,3 +69,12 @@ model['ma_am']
 
 model.most_similar('ma_am')
 model.most_similar(positive=['ma_am', 'woman'], negative=['man'])
+model.most_similar(positive=['father', 'woman'], negative=['man'])
+
+#Reduce WordVector dimensionality with t-SNE
+tsne = TSNE(n_components=2, n_iter=1000)
+X_2d = tsne.fit_transform(model[model.wv.vocab])
+coords_df = pd.DataFrame(X_2d, columns=['x','y'])
+coords_df['token'] = model.wv.vocab.keys()
+coords_df.head()
+
