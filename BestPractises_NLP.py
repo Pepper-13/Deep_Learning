@@ -63,3 +63,7 @@ model = Word2Vec(sentences=clean_sents, size=64, sg=1, window=10, min_count=10, 
 model.save('clean_gutenberg_model.w2v')
 len(model.wv.vocab)
 
+#Explore Model
+model = gensim.models.Word2Vec.load('clean_gutenberg_model.w2v')
+model['ma_am']
+
