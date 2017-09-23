@@ -10,3 +10,14 @@ from bokeh.io import output_notebook, output_file
 from bokeh.plotting import show, figure
 %matplotlib inline
 
+nltk.download('punkt')
+
+# new!
+import string
+from nltk.corpus import stopwords
+from nltk.stem.porter import *
+from gensim.models.phrases import Phraser, Phrases
+from keras.preprocessing.text import one_hot
+
+
+
