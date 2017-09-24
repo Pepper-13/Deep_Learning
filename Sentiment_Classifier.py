@@ -59,3 +59,9 @@ model.add(Dense(1, activation='sigmoid'))
 
 #Have a look at the summary
 model.summary()
+
+#Configure the model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+modelcheckpoint = ModelCheckpoint(filepath=output_dir+"/weights.{epoch:02d}.hdf5")
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
