@@ -65,3 +65,9 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 modelcheckpoint = ModelCheckpoint(filepath=output_dir+"/weights.{epoch:02d}.hdf5")
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
+    
+#Train the data
+# 89.1% validation accuracy in epoch 2
+# with second convolutional layer is essentially the same at 89.0%
+model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_data=(x_valid, y_valid), callbacks=[modelcheckpoint])
+
