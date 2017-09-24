@@ -38,3 +38,6 @@ k_conv = 3 # kernel length
 # dense layer architecture: 
 n_dense = 256
 dropout = 0.2
+
+#Load Data
+(x_train, y_train), (x_valid, y_valid) = imdb.load_data(num_words=n_unique_words) # removed n_words_to_skip
