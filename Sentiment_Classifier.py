@@ -56,3 +56,6 @@ model.add(GlobalMaxPooling1D())
 model.add(Dense(n_dense, activation='relu'))
 model.add(Dropout(dropout))
 model.add(Dense(1, activation='sigmoid'))
+
+#Have a look at the summary
+model.summary()
