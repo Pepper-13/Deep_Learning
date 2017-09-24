@@ -71,3 +71,6 @@ if not os.path.exists(output_dir):
 # with second convolutional layer is essentially the same at 89.0%
 model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_data=(x_valid, y_valid), callbacks=[modelcheckpoint])
 
+#Evaluate
+model.load_weights(output_dir+"/weights.01.hdf5") # zero-indexed
+y_hat = model.predict_proba(x_valid)
