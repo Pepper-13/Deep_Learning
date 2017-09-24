@@ -46,3 +46,13 @@ dropout = 0.2
 x_train = pad_sequences(x_train, maxlen=max_review_length, padding=pad_type, truncating=trunc_type, value=0)
 x_valid = pad_sequences(x_valid, maxlen=max_review_length, padding=pad_type, truncating=trunc_type, value=0)
 
+#Design Neural Network Architechture
+model = Sequential()
+model.add(Embedding(n_unique_words, n_dim, input_length=max_review_length)) 
+model.add(SpatialDropout1D(drop_embed))
+model.add(Conv1D(n_conv, k_conv, activation='relu'))
+# model.add(Conv1D(n_conv, k_conv, activation='relu'))
+model.add(GlobalMaxPooling1D())
+model.add(Dense(n_dense, activation='relu'))
+model.add(Dropout(dropout))
+model.add(Dense(1, activation='sigmoid'))
