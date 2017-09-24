@@ -15,3 +15,19 @@ from sklearn.metrics import roc_auc_score
 import matplotlib.pyplot as plt 
 %matplotlib inline
 
+#Set Hyperparamters
+
+# output directory name:
+output_dir = 'model_output/conv'
+
+# training:
+epochs = 4
+batch_size = 128
+
+# vector-space embedding: 
+n_dim = 64
+n_unique_words = 5000 
+max_review_length = 400
+pad_type = trunc_type = 'pre'
+drop_embed = 0.2 # new!
+
