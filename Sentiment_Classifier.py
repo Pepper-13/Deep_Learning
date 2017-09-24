@@ -74,3 +74,10 @@ model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, val
 #Evaluate
 model.load_weights(output_dir+"/weights.01.hdf5") # zero-indexed
 y_hat = model.predict_proba(x_valid)
+
+#Visualise
+plt.hist(y_hat)
+_ = plt.axvline(x=0.5, color='orange')
+
+#Score
+"{:0.2f}".format(roc_auc_score(y_valid, y_hat)*100.0)
