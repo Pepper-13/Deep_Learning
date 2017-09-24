@@ -31,3 +31,10 @@ max_review_length = 400
 pad_type = trunc_type = 'pre'
 drop_embed = 0.2 # new!
 
+# convolutional layer architecture:
+n_conv = 256 # filters, a.k.a. kernels
+k_conv = 3 # kernel length
+
+# dense layer architecture: 
+n_dense = 256
+dropout = 0.2
